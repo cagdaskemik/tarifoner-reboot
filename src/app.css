@@ -1,0 +1,381 @@
+/* App.css */
+:root {
+  font-weight: 400;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  
+  background-image: url("lib/bgi.jpg");
+  background-size: 600px 600px;
+  background-repeat: repeat;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.card {
+  padding: 2em;
+}
+
+#app {
+  margin-left: 0%;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;  line-height: 1.5;
+
+}
+
+.new{
+  margin-left: 5%;
+} 
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  white-space: normal;
+  overflow-x: hidden;
+  padding: 0%	;
+  margin: 0%;
+}
+
+.buttons-container .card-body {
+  display: inline-block;
+  flex-grow: 0;  /* This ensures the button doesn't stretch */
+
+}
+
+.card-body.gradient-buttons {
+  width: 150px;
+  flex-shrink: 0;  /* This ensures the button doesn't shrink */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.img-fluid, .img-shadow {
+  margin-bottom: auto;
+}
+.redirect {
+  width: 200px; /* adjust as needed */
+  white-space: normal;
+}
+.name, .type {
+  text-align: center;
+  white-space: normal;  /* Allow text to wrap */
+  overflow-wrap: break-word; /* breaks long words if necessary */
+  max-width: 100%; /* or whatever you feel looks right */
+  margin: 5px 0;
+  font-size: 15px;
+}
+.name {
+  font-weight: bold;
+  top: 30px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input {
+  display: block;
+  max-width: 300px;
+  margin: 0.5rem 0;
+}
+
+.btn3d {
+  position: relative;
+  top: -6px;
+  border: 0;
+  transition: all 40ms linear;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.btn3d:active:focus,
+.btn3d:focus:hover,
+.btn3d:focus {
+  outline: medium none;
+}
+
+.btn3d:active {
+  top: 2px;
+}
+
+
+.btn3d.btn-danger {
+  box-shadow: 0 0 0 1px #b93802 inset,
+    0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #aa0000,
+    0 8px 8px 1px rgba(0, 0, 0, 0.5);
+  background-color: #d73814;
+}
+
+.buttons-container .card-body.btn3d.active {
+  box-shadow: 0 0 0 1px #b93802 inset,
+    0 0 0 1px rgba(251, 230, 0, 0.758) inset,
+    0 3px 6px 3px rgba(249, 117, 2, 0.878);
+  background-color: #d73814;
+  top: 2px;
+}
+
+.gradient-buttons.btn {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 98, 0, 0.901),
+    rgba(255, 255, 255, 0.2) 49%,
+    rgba(0, 0, 0, 0.15) 51%,
+    rgba(0, 0, 0, 0.05)
+  );
+  background-repeat: repeat-x;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.form-control:focus {
+  border-color: rgba(255, 98, 0, 0.901);
+  box-shadow: rgba(255, 98, 0, 0.901),
+}
+
+
+#survey-popup {
+  font-family: Open Sans;
+  position: fixed;
+  left: -1px;
+  top: 20%;
+  transform: translate(-52%, -10%);
+  width: 400px;
+  font-weight: bolder;
+  transition: all linear 150ms;
+  z-index: 5;
+  backdrop-filter: blur(10px);
+}
+
+.survey-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  border-radius: 0px 6px 6px 0px;
+  overflow: hidden;
+  border: 1px solid #dadada;
+  max-height: 500px; /* This can be adjusted based on your preference */
+  overflow-y: auto; /* Makes content scrollable vertically if it exceeds the max height */
+  transition: height 0.3s ease;
+}
+
+.survey-popup-button {
+  position: absolute;
+  cursor: pointer;
+  transform: translate(-0%, -50%);
+  /* Safari */
+  -webkit-transform: rotate(-90deg);
+  /* Firefox */
+  -moz-transform: rotate(-90deg);
+  /* IE */
+  -ms-transform: rotate(-90deg);
+  /* Opera */
+  -o-transform: rotate(-90deg);
+  /* Internet Explorer */
+  background: rgba(0, 0, 0, 0.1);
+  left: 90%;
+  top: 70%;
+  padding: 0.5em 1em;
+  border-radius: 0px 0px 4px 4px;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #ffffff;
+  overflow-wrap: normal;
+  border: 1px solid #dedede;
+  border-top: none !important;
+  margin-left: 2px;
+  backdrop-filter: blur(100px);
+  max-height: 500px; /* This can be adjusted based on your preference */
+}
+
+#survey-popup.closed {
+  transform: translate(-100%, -50%);
+  backdrop-filter: blur(10px);
+}
+
+.loading:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+
+  margin: -0.64285714em 0 0 -0.64285714em;
+  width: 1.28571429em;
+  height: 1.28571429em;
+  /* -webkit-animation: button-spin 0.6s linear;
+  animation: button-spin 0.6s linear;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
+  border-radius: 500rem;
+  border-color: #fff transparent transparent;
+  border-style: solid;
+  border-width: 0.2em;
+  box-shadow: 0 0 0 1px transparent;
+  z-index: 2;
+}
+
+.loading:before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  margin: -0.64285714em 0 0 -0.64285714em;
+  width: 1.28571429em;
+  height: 1.28571429em;
+  border-radius: 500rem;
+  border: 0.2em solid rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+.loading {
+  position: relative;
+}
+
+@-webkit-keyframes button-spin {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes button-spin {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.selectedList {
+  color: rgb(255, 255, 255);
+  text-align: right;
+  outline: red;
+  padding-top: 1%;
+  padding-right: 5%;
+}
+
+/* For WebKit browsers like Chrome, Safari, etc. */
+.survey-container::-webkit-scrollbar {
+  width: 8px; /* Making the scrollbar thinner */
+}
+
+.survey-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1); /* Track color */
+  border-radius: 4px;
+}
+
+.survey-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5); /* Scroll thumb color */
+  border-radius: 4px;
+}
+
+.survey-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.7); /* Add a hover effect */
+}
+
+.img-fluid {
+  z-index: 2;
+  position: absolute;
+  top: 10px;
+}
+
+.img-shadow {
+  position: absolute;
+  filter: blur(4px) brightness(0.85); /* Adjust the blur for the desired shadow softness and brightness for darkness */
+  transform: scale(1.2);
+  z-index: 1;
+  top: 12px;
+  /* Adjust to set the shadow offset */
+}
+.img-fallback {
+  position: absolute;
+  top: 20px;
+}
+.bold {
+  font-weight: bold;
+}
+
+.myitemlist {
+  font-weight: bolder;
+}
+.construction {
+  font-size: 20px;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  margin-top: 1%;
+  text-align: center;
+}
