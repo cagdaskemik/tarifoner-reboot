@@ -19,6 +19,7 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.0.2",
     "bootstrap": "^5.3.1",
     "bootstrap-icons": "^1.10.5",
     "firebase": "^9.23.0",
