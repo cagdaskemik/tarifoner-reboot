@@ -1,6 +1,7 @@
 # Tarifoner - Your Recipe Helper 🍲
 
-![screenshot](screenshot-path.png) 
+![logotarif](https://github.com/cagdaskemik/tarifoner-reboot/assets/108903103/7d43084f-adb0-43b8-8100-1dbf6addc4ad)
+
 > Replace `screenshot-path.png` with an actual screenshot path of your application for a visual preview.
 
 An interactive Svelte application that assists users in searching for and categorizing ingredients, helping them find the best recipes with the ingredients they have on hand. Users can filter ingredients by categories, search for specific ingredients, and get recipes based on the ingredients they have.
@@ -27,7 +28,6 @@ Check out the SvelteKit live demo version [here](https://tarifoner.pages.dev).
 - [Svelte](https://svelte.dev/)
 - [Firebase](https://firebase.google.com/)
 - [Bootstrap](https://getbootstrap.com/)
-- [Vercel Analytics](https://vercel.com/docs/analytics)
 
 ## Contributing 🤝
 
